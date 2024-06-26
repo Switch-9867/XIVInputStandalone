@@ -1,5 +1,8 @@
 #include "app.h"
 
+#include <chrono>
+#include <thread>
+
 namespace xivInputStandalone {
 
     App::App()
@@ -20,6 +23,7 @@ namespace xivInputStandalone {
 
         while (!shouldClose) {
             keybindManager.update();
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
         }
     }
 
