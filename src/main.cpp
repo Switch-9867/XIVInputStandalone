@@ -4,9 +4,8 @@
 #include <iostream>
 #include <stdexcept>
 
-INT APIENTRY WinMain(HINSTANCE instance, HINSTANCE, PSTR args, INT cmd_show) {
-
-    cppTemplate::App app{ instance, args, cmd_show };
+int main() {
+    xivInputStandalone::App app{};
 
     try {
         app.run();
@@ -17,5 +16,4 @@ INT APIENTRY WinMain(HINSTANCE instance, HINSTANCE, PSTR args, INT cmd_show) {
     }
 
     return EXIT_SUCCESS;
-
 }

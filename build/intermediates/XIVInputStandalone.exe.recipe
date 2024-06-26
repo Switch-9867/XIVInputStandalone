@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\CodingLibrary\XIVInputStandalone\build\CPPTemplate.exe</FullPath>
+      <FullPath>D:\CodingLibrary\XIVInputStandalone\build\XIVInputStandalone.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

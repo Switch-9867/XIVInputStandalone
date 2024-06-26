@@ -2,10 +2,12 @@
 
 #include <Windows.h>
 
-namespace cppTemplate {
+#include "keybind_manager.h"
+
+namespace xivInputStandalone {
     class App {
     public:
-        App(HINSTANCE instance, PSTR args, INT cmd_show);
+        App();
         ~App();
 
         App(const App&) = delete;
@@ -14,6 +16,9 @@ namespace cppTemplate {
         void run();
 
     private:
+
+        KeybindManager keybindManager{};
+        bool shouldClose;
 
     };
 }
