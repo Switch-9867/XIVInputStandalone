@@ -21,7 +21,6 @@ namespace xivInputStandalone {
         keybindManager.createKeybind(VK_XBUTTON1, VK_LSHIFT);
         keybindManager.createKeybind(VK_XBUTTON2, VK_LCONTROL);
 
-        focusManager.addInclusion(L"chrome");
         focusManager.addInclusion(L"FINAL FANTASY XIV");
 
         while (!shouldClose) {

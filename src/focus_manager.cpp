@@ -62,6 +62,10 @@ namespace xivInputStandalone {
         std::wstring lower = inclusion;
         std::transform(lower.begin(), lower.end(), lower.begin(), [](unsigned char c) { return std::tolower(c); });
 
-        validWindowTitles.push_back(inclusion);
+        Logger::log("Loaded Window Inclusion: \"");
+        Logger::log(lower);
+        Logger::logline("\"");
+
+        validWindowTitles.push_back(lower);
     }
 }
