@@ -140,15 +140,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\logger.cpp" />
     <ClCompile Include="src\app.cpp" />
+    <ClCompile Include="src\focus_manager.cpp" />
     <ClCompile Include="src\keybind.cpp" />
     <ClCompile Include="src\keybind_manager.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\app.h" />
+    <ClInclude Include="src\focus_manager.h" />
     <ClInclude Include="src\keybind.h" />
     <ClInclude Include="src\keybind_manager.h" />
+    <ClInclude Include="src\logger.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

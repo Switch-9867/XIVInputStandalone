@@ -21,7 +21,11 @@ namespace xivInputStandalone {
         keybindManager.createKeybind(VK_XBUTTON1, VK_LSHIFT);
         keybindManager.createKeybind(VK_XBUTTON2, VK_LCONTROL);
 
+        focusManager.addInclusion(L"chrome");
+        focusManager.addInclusion(L"FINAL FANTASY XIV");
+
         while (!shouldClose) {
+            focusManager.update();
             keybindManager.update();
             std::this_thread::sleep_for(std::chrono::milliseconds(100));
         }

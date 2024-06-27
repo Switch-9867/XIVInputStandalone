@@ -3,6 +3,7 @@
 #include <Windows.h>
 
 #include "keybind_manager.h"
+#include "focus_manager.h"
 
 namespace xivInputStandalone {
     class App {
@@ -17,8 +18,9 @@ namespace xivInputStandalone {
 
     private:
 
-        KeybindManager keybindManager{};
-        bool shouldClose;
+        FocusManager focusManager{};
+        KeybindManager keybindManager{ &focusManager };
+        bool shouldClose{false};
 
     };
 }

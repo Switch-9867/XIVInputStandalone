@@ -5,11 +5,6 @@
 
 namespace xivInputStandalone {
 
-    KeybindManager::KeybindManager()
-    {
-
-    }
-
     KeybindManager::~KeybindManager()
     {
 
@@ -19,6 +14,7 @@ namespace xivInputStandalone {
     {
         if (!isEnabled) return;
         if (keybinds.empty()) return;
+        if (!focusManager->shouldEnable) return;
 
         for (auto& keybind : keybinds) {
             if (keybind.isEnabled) {

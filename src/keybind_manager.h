@@ -1,13 +1,14 @@
 #pragma once
 
 #include "keybind.h"
+#include "focus_manager.h"
 
 #include <vector>
 
 namespace xivInputStandalone {
     class KeybindManager {
     public:
-        KeybindManager();
+        KeybindManager(FocusManager* focusManager) : focusManager{ focusManager } {};
         ~KeybindManager();
 
         KeybindManager(const KeybindManager&) = delete;
@@ -15,6 +16,8 @@ namespace xivInputStandalone {
 
         void update();
         void createKeybind(int sourceKey, int destinationKey);
+
+        FocusManager* focusManager;
 
     private:
 
